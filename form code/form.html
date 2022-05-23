@@ -1,0 +1,220 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../form css/form.css">        
+        <script src="../javascript/javascript.js"></script>        
+    </head>
+    <body>
+
+      <div class="f"><!--Details-->  
+        <br>
+        <br>
+        <h1>Customer Details:</h1>        
+        <hr>
+        <form name="myform" method="post" onsubmit="return submit()">
+          <span id="sb" class="span"></span>
+            <div>
+                <p>Full Name
+                <span style="color: red;">*</span></p>
+            </div>
+
+            <!--Full Name-->
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" onblur="return validateform1()" id="fname" name="firstname">
+                    </td>
+                    <td>
+                        <input type="text" onchange="return validateform2()" onblur="return validateform2()" id="lname" name="lastname">
+                        
+                    </td>
+                    </tr>
+                <tr>
+                    <td>
+                        <label class="a" for="fname" id="fname">First Name</label><br>
+                        <span id="fname1" class="span1"></span>
+                    </td>
+                    <td>
+                        <label class="a" for="lname">Last Name</label><br>
+                        <span id="lname1" class="span1"></span>
+                    </td>
+                </tr>
+            </table>
+                <br>
+
+            <!--Address-->
+            <p>Address
+            <span style="color: red;">*</span></p>
+
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" onchange="return validateform3()" onblur="return validateform3()" id="street1" value="" name="street1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="a" for="street01">Street Address</label> <br>
+                        <span id="str1" class="span1"></span><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" onchange="return validateform4()" onblur="return validateform4()" id="street2" value="" name="street2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="a" for="street02">Street Address Line 2</label> <br>
+                        <span id="str2" class="span1"></span><br>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" onchange="return validateform5()" onblur="return validateform5()" id="city" value="" name="city">
+                    </td>
+                    <td>
+                        <input type="text" onchange="return validateform6()" onblur="return validateform6()" id="state" value="" name="state">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="a" for="city">City</label> 
+                        <span id="cy" class="span1"></span>
+                    </td>
+                    <td>
+                        <label class="a" for="state">State / Province</label>
+                        <span id="pr" class="span1"></span>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <input type="text" onchange="return validateform7()" onblur="return validateform7()" id="code" value="" name="code">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="a" for="code">Postal / Zip Code</label> <br>
+                        <span id="zi" class="span1"></span><br>
+                    </td>
+                </tr>
+            </table>
+            
+            <br>
+            <!--No. & mail-->
+            <table class="table1">
+                <tr>
+                    <td>
+                        <p>Phone No.<span style="color: red;">*</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" onchange="return validateform8()" onblur="return validateform8()" id="mno" value="" placeholder="(000) 000-0000" name="mno">
+                        <br><span id="mn" class="span1"></span><br>
+                    </td>
+                </tr>
+                        
+                <tr>
+                    <td>
+                        <p>E-mail<span style="color: red;">*</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="email" onchange="return validateform9()" onblur="return validateform9()" id="mail" value="" placeholder="ex:email@yahoo.com">
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="a" for="mail">example@example.com</label> <br>
+                        <span id="em" class="span1"></span><br>
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+            <!--Select Menu-->
+            <p>How did you hear about us?</p>
+            <div>
+              <select class="all" id="dropd" name="sel" onchange="return validateform10()" onblur="return validateform10()">
+                <option value="0">Please select</option>
+                <option value="1">Newspaper</option>
+                <option value="2">Internet</option>
+                <option value="3">Magazine</option>
+                <option value="4">Others (Please specify)</option>
+            </select>
+            <span id="dd" class="span1"></span><br>
+            </div>  
+            <br>
+
+            <!--Text area-->
+            <p>
+                Feedback about us :
+            </p>
+            <textarea class="a" onchange="return validateform11()" onblur="return validateform11()" id="text1"></textarea>
+            <span id="ta1" class="span1"></span>
+            <br>
+            <p>
+                Suggestions if any further improvement :
+            </p>
+            <textarea class="a" onchange="return validateform10()" onblur="return validateform12()" id="text2"></textarea>
+            <span id="ta2" class="span1"></span>
+            <br>
+            <br>
+
+            <!--Checkbox-->
+                <label class="container" for="container">Will you be recommend us?</label>
+                    <input type="checkbox" onchange="return validateform13()" onblur="return validateform13()" id="container" name="container" value=""><br>
+                    <span id="check" class="span1"></span>
+            
+            <br>
+            <!--Radio-->
+            <p>Gender :
+                <input type="radio" onchange="return validateform14()" onblur="return validateform14()" id="male" value="male" name="gender" class="gender1">
+                <label for="male">Male</label>
+
+                <input type="radio" onchange="return validateform14()" onblur="return validateform14()" id="female" value="female" name="gender" class="gender1">
+                <label for="female">female</label>
+
+                <input type="radio" onchange="return validateform14()" onblur="return validateform15()" id="other" value="other" name="gender" class="gender1">
+                <label for="other">other</label><br>
+                <span id="g1" class="span1"></span>
+            </p>
+            <br>
+
+            <!--Table-->
+            <p>Please give referance of any two people whom you feel:</p>
+           
+            <table class="last">
+                <tr>
+                    <td class="t3"></td>
+                    <td class="t1">Full name</td>
+                    <td class="t1">Address</td>
+                    <td class="t1">Contact Number</td>
+                </tr>
+                <tr>
+                    <td class="t1">1</td>
+                    <td class="t2"></td>
+                    <td class="t2"></td>
+                    <td class="t2"></td>
+                </tr>
+                <tr>
+                    <td class="t1">2</td>
+                    <td class="t2"></td>
+                    <td class="t2"></td>
+                    <td class="t2"></td>
+                </tr>
+            </table>
+        
+        
+        <hr>
+        
+        <input class="button" type="submit"  id = "submit" value = "Submit">
+        </form>
+      </div>
+    </body>
+</html>
